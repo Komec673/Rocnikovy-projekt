@@ -4,3 +4,5 @@ Cílem tohoto projektu je porovnat, jak se v profesionálním fotbale používaj
 
 Zaměřím se na to, co umí drahé systémy přesně změřit (polohu, rychlost míče nebo hráče), navrhnu vlastní prototyp založený na mikrokontroleru, který nabídne cenově dostupnou alternativu a zjistím jaké problémy můžou nastávat s levnými součástkami (např. chyba v měření vzdálenosti).
 ## Průzkum
+### Komerční systémy
+Komerční sportovní analytické systémy se zaměřují na přesné a komplexní monitorování výkonu celého týmu v reálném čase.
