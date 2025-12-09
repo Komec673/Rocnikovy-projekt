@@ -1,7 +1,5 @@
 # Rocnikovy-projekt
 
 ## Cíl projektu
-Cílem tohoto ročníkového projektu je prozkoumat, porovnat a navrhnout praktické využití mikrokontrolerů a senzoriky v prostředí fotbalového tréninku nebo zápasu.
-
-Projekt se zaměří na analýzu dvou různých řešení (komerční vs. DIY) pro sledování klíčových metrik hráče nebo míče (rychlost, zrychlení, poloha) a vyvrcholí návrhem vlastního prototypu založeného na mikrokontroleru (např. Arduino, ESP32, Raspberry Pi Pico), který nabídne cenově dostupnou alternativu k profesionálním systémům.
-
+Cílem tohoto projektu je porovnat, jak se v profesionálním fotbale používají drahé monitorovací systémy (vesty s GPS) a jak bychom mohli podobnou funkci levně napodobit pomocí mikrokontrolerů (jako je např. Raspberry Pi Pico, Arduino, ESP32) a levných senzorů.
+Zaměřím se na to, co umí drahé systémy přesně změřit (polohu, rychlost míče nebo hráče), navrhnu vlastní prototyp založený na mikrokontroleru, který nabídne cenově dostupnou alternativu a zjistím jaké problémy můžou nastávat s levnými součástkami (např. chyba v měření vzdálenosti).
