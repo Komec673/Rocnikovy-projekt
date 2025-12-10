@@ -29,6 +29,14 @@ Typ zařízení: Malá krabička nebo modul připevněný na botě nebo opasku.
 
 Primární senzory: IMU modul (Inertial Measurement Unit) – např. MPU-6050 (Akcelerometr a Gyroskop). Levné moduly nemají GPS.
 
-Sledované metriky: Zrychlení (měřeno akcelerometrem), rychlost (vypočítána integrací zrychlení – \(v(t)=v_{0}+\int _{t_{0}}^{t}a(\tau )d\tau \)\(v(t)=v_{0}+\int _{t_{0}}^{t}a(\tau )d\tau \)), směr/rotace (měřeno gyroskopem).
+Sledované metriky: Zrychlení (měřeno akcelerometrem), rychlost (vypočítána integrací zrychlení – v(t) = v0 + integral od t0 do t z a(tau) d(tau)), směr/rotace (měřeno gyroskopem).
 
-Mikrokontroler: 
+Mikrokontroler: Raspberry Pi Pico W – má dvě jádra pro rychlé zpracování a integrované Wi-Fi/Bluetooth. To řeší problém komunikace a umožňuje posílat data o zrychlení rovnou do počítače nebo telefonu.
+
+Zpracování dat: Mikrokontroler čte data ze senzorů (např. 100x za sekundu). Dvě jádra (Core 0 a Core 1) umožňují dělit práci: např. Core 0 čte a filtruje data ze senzoru, Core 1 se stará o bezdrátový přenos.
+
+Komunikace:
+
+Přesnost:
+
+Cena:
