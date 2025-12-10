@@ -20,3 +20,15 @@ Komunikace: Vysokofrekvenční rádiové přenosy (pro data v reálném čase na
 Přesnost: Vysoká přesnost (poloha s přesností +- 1 metru, zrychlení s vysokou vzorkovací frekvencí až 100 Hz).
 
 Cena:Vysoká cena (2 500 kč+ za jednotku + licence).
+### DIY projekty - jednoduché monitotování
+Tyto projekty se snaží replikovat základní funkce komerčních systémů s minimálními náklady, často zaměřené na jednu konkrétní metriku.
+#### Příklad: Měření rychlosti hráče pomocí Raspberry Pi Pico W
+Tento typ projektu je ideální pro demonstraci základních principů zpracování senzorických dat včetně bezdrátového přenosu dat v reálném čase.
+
+Typ zařízení: Malá krabička nebo modul připevněný na botě nebo opasku.
+
+Primární senzory: IMU modul (Inertial Measurement Unit) – např. MPU-6050 (Akcelerometr a Gyroskop). Levné moduly nemají GPS.
+
+Sledované metriky: Zrychlení (měřeno akcelerometrem), rychlost (vypočítána integrací zrychlení – \(v(t)=v_{0}+\int _{t_{0}}^{t}a(\tau )d\tau \)\(v(t)=v_{0}+\int _{t_{0}}^{t}a(\tau )d\tau \)), směr/rotace (měřeno gyroskopem).
+
+Mikrokontroler: 
