@@ -19,7 +19,7 @@ Komunikace: Vysokofrekvenční rádiové přenosy (pro data v reálném čase na
 
 Přesnost: Vysoká přesnost (poloha s přesností +- 1 metru, zrychlení s vysokou vzorkovací frekvencí až 100 Hz).
 
-Cena:Vysoká cena (2 500 kč+ za jednotku + licence).
+Cena: Vysoká cena (2 500 kč+ za jednotku + licence).
 ### DIY projekty - jednoduché monitotování
 Tyto projekty se snaží replikovat základní funkce komerčních systémů s minimálními náklady, často zaměřené na jednu konkrétní metriku.
 #### Příklad: Měření rychlosti hráče pomocí Raspberry Pi Pico W
@@ -35,8 +35,10 @@ Mikrokontroler: Raspberry Pi Pico W – má dvě jádra pro rychlé zpracování
 
 Zpracování dat: Mikrokontroler čte data ze senzorů (např. 100x za sekundu). Dvě jádra (Core 0 a Core 1) umožňují dělit práci: např. Core 0 čte a filtruje data ze senzoru, Core 1 se stará o bezdrátový přenos.
 
-Komunikace:
+Komunikace: Integrované Wi-Fi pro přenos dat do lokální sítě nebo na server (např. MQTT, HTTP) nebo Bluetooth pro připojení k aplikaci v telefonu. Toto je klíčová výhoda oproti standardnímu Pico.
 
-Přesnost:
+Přesnost: Přesnost měření je stejná – přesnost polohy je stále limitována driftem, ale přenos dat je spolehlivý.
 
-Cena:
+Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, stále řádově 300 - 700 Kč za komplet).
+
+### Srovnání
