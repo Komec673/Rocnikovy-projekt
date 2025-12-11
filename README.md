@@ -29,4 +29,5 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 - Přesnost: Přesnost měření je stejná – přesnost polohy je stále limitována driftem, ale přenos dat je spolehlivý.
 - Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, stále řádově 300 - 700 Kč za komplet).
 
-### Srovnání
+### Srovnání: Komerční vs. DIY řešení
+#### Komerční systém                       | DIY 
