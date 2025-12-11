@@ -6,7 +6,7 @@ Zaměřím se na to, co umí drahé systémy přesně změřit (polohu, rychlost
 ## Průzkum
 ### Komerční systémy
 Komerční sportovní analytické systémy se zaměřují na přesné a komplexní monitorování výkonu celého týmu v reálném čase.
-#### Příklad: Systémy Catapult a STATSports
+#### Příklad: Systémy STATSports a Catapult
 - Typ zařízení: Vesta/Podprsenka s malým boxem na zádech.
 - Primární senzory: GNSS (GPS + GLONASS), nebo LPS (ClearSky, vlastní lokální polohový systém společnosti Catapult) pro venkovní sledování polohy. Akcelerometry, Gyroskopy a Magnetometry (IMU – Inertial Measurement Unit) pro sledování pohybu, zrychlení, zpomalení a směru.
 - Sledované metriky: Rychlost (maximální, průměrná), uběhlá vzdálenost (celková, v různých rychlostních zónách), zrychlení/zpomalení (počet a intenzita), srdeční tep (pomocí externího hrudního pásu nebo integrovaného optického senzoru).
@@ -30,8 +30,8 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 - Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, stále řádově 300 - 700 Kč za komplet).
 
 ### Srovnání: Komerční vs. DIY řešení
-| Funkce | Komerční Systém (Catapult) | DIY Řešení (Pico W) |
+| Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
 | :--- | :--- | :--- |
-| **Cena HW** | Vysoká ($1000+) | Velmi nízká ($15 - $35) |
+| **Primární mikrokontroler/Čip** | Speciálně optimalizované ARM Cortex-M čipy, ASIC (Application-Specific Integrated Circuit) pro přesnost. | RP2040 (Dvoujádrový) čip, navržený pro rychlé zpracování I/O. |
 | **Senzor Polohy** | Přesná GNSS | Žádný (nutné připojit externě) |
 | **Přesnost** | Vysoká, díky fúzi senzorů | Střední/Nízká, limitována driftem |
