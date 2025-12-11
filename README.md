@@ -31,6 +31,7 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 
 ### Srovnání: Komerční vs. DIY řešení
 | Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
+| :--- | :--- | :--- |
 | **Primární mikrokontroler/Čip** | Speciálně optimalizované ARM Cortex-M čipy, ASIC (Application-Specific Integrated Circuit) pro přesnost. | RP2040 (Dvoujádrový) čip, navržený pro rychlé zpracování I/O. |
 | **Senzor Polohy** | Přesná GNSS | Žádný (nutné připojit externě) |
 | **Přesnost** | Vysoká, díky fúzi senzorů | Střední/Nízká, limitována driftem |
