@@ -30,4 +30,8 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 - Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, stále řádově 300 - 700 Kč za komplet).
 
 ### Srovnání: Komerční vs. DIY řešení
-#### Komerční systém                       | DIY 
+| Funkce | Komerční Systém (Catapult) | DIY Řešení (Pico W) |
+| :--- | :--- | :--- |
+| **Cena HW** | Vysoká ($1000+) | Velmi nízká ($15 - $35) |
+| **Senzor Polohy** | Přesná GNSS | Žádný (nutné připojit externě) |
+| **Přesnost** | Vysoká, díky fúzi senzorů | Střední/Nízká, limitována driftem |
