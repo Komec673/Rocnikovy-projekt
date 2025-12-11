@@ -13,7 +13,7 @@ Komerční sportovní analytické systémy se zaměřují na přesné a komplexn
 - Zpracování dat: Zařízení obsahuje výkonný mikrokontroler (často na bázi ARM Cortex architektury) a specializované čipy pro zpracování senzorických dat a fúzi senzorů. Data jsou logována do interní paměti a/nebo přenášena v reálném čase.
 - Komunikace: Vysokofrekvenční rádiové přenosy (pro data v reálném čase na krátkou vzdálenost k přijímači u hřiště) nebo Bluetooth/Wi-Fi pro stažení logovaných dat po tréninku.
 - Přesnost: Vysoká přesnost (poloha s přesností +- 1 metru, zrychlení s vysokou vzorkovací frekvencí až 100 Hz).
-- Cena: Vysoká cena (2 500 kč+ za jednotku + licence).
+- Cena: Vysoká cena (25 000 kč+ za jednotku + licence).
 ![Vesta](vesta.png)
 ### DIY projekty - jednoduché monitotování
 Tyto projekty se snaží replikovat základní funkce komerčních systémů s minimálními náklady, často zaměřené na jednu konkrétní metriku.
@@ -27,11 +27,18 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 - Zpracování dat: Mikrokontroler čte data ze senzorů (např. 100x za sekundu). Dvě jádra (Core 0 a Core 1) umožňují dělit práci: např. Core 0 čte a filtruje data ze senzoru, Core 1 se stará o bezdrátový přenos.
 - Komunikace: Integrované Wi-Fi pro přenos dat do lokální sítě nebo na server (např. MQTT, HTTP) nebo Bluetooth pro připojení k aplikaci v telefonu. Toto je klíčová výhoda oproti standardnímu Pico.
 - Přesnost: Přesnost měření je stejná – přesnost polohy je stále limitována driftem, ale přenos dat je spolehlivý.
-- Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, stále řádově 300 - 700 Kč za komplet).
+- Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, 300 - 700 Kč za komplet).
 
 ### Srovnání: Komerční vs. DIY řešení
 | Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
 | :--- | :--- | :--- |
-| **Primární mikrokontroler/Čip** | Speciálně optimalizované ARM Cortex-M čipy, ASIC (Application-Specific Integrated Circuit) pro přesnost. | RP2040 (Dvoujádrový) čip, navržený pro rychlé zpracování I/O. |
-| **Senzor Polohy** | Přesná GNSS | Žádný (nutné připojit externě) |
-| **Přesnost** | Vysoká, díky fúzi senzorů | Střední/Nízká, limitována driftem |
+| **Primární mikrokontroler/Čip** | Speciálně optimalizované ARM Cortex-M čipy, ASIC (Application-Specific Integrated Circuit) pro přesnost | RP2040 (Dvoujádrový) čip, navržený pro rychlé zpracování I/O |
+| **Senzor Polohy** | Multi-band GNSS (GPS, GLONASS, Galileo) s korekcemi | Žádný (lze připojit levný GPS modul, ale přesnost pro rychlý fotbal je nízká) |
+| **Inerciální senzor (IMU)** | Vysoká třída, nízký šum, vysoká vzorkovací frekvence => 100 Hz | Spotřebitelská třída (např. MPU-6050, MPU-9250), vyšší šum |
+| **Sledované metriky** | Přesná poloha (heatmapy), maximální rychlost, počet sprintů, akcelerační zátěž. | Zrychlení v reálném čase, Relativní rotační změny. Rychlost/Vzdálenost pouze jako odhad s chybou (driftem). |
+| **Řešení chyby (drift)** | Pokročilá fúze senzorů (GNSS + IMU) + proprietární Kalmanovy filtry. | Nutnost použít Kalmanův filtr nebo Doplněný filtr (Complementary Filter) vlastními silami. |
+| **Bezdrátová komunikace** | Vysokofrekvenční RF modul (široký dosah, spolehlivost) nebo Bluetooth LE. | Integrované Wi-Fi/Bluetooth (vhodné pro lokální síť, dosah limitován standardem). |
+| **Napájení a výdrž** | Optimalizované obvody, baterie s výdrží 6-10 hodin. | Běžná Li-Pol baterie. Výdrž silně závislá na použití Wi-Fi a kódu. |
+| **Účel použití** | Monitorování fyziologické zátěže, taktická analýza (kde se hráč pohyboval). | Demonstrace principů, testování algoritmů (filtrace dat), měření relativní zátěže (akcelerace). |
+| **Požadované znalosti** | Žádné (jen uživatelská úroveň). | Hardware (I2C, pájení), programování (MicroPython/C++), matematika (filtrace dat). |
+| **Přibližná cena** | 25 000 Kč+ za jednotku + roční licenční poplatky. | 300 - 700 Kč za komplet |
