@@ -14,6 +14,7 @@ Komerční sportovní analytické systémy se zaměřují na přesné a komplexn
 - Komunikace: Vysokofrekvenční rádiové přenosy (pro data v reálném čase na krátkou vzdálenost k přijímači u hřiště) nebo Bluetooth/Wi-Fi pro stažení logovaných dat po tréninku.
 - Přesnost: Vysoká přesnost (poloha s přesností +- 1 metru, zrychlení s vysokou vzorkovací frekvencí až 100 Hz).
 - Cena: Vysoká cena (2 500 kč+ za jednotku + licence).
+![Vesta](vesta.png)
 ### DIY projekty - jednoduché monitotování
 Tyto projekty se snaží replikovat základní funkce komerčních systémů s minimálními náklady, často zaměřené na jednu konkrétní metriku.
 #### Příklad: Měření rychlosti hráče pomocí Raspberry Pi Pico W
