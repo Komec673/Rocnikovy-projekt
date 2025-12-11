@@ -1,4 +1,4 @@
-# Rocnikovy-projekt
+# Ročníkový projekt
 ## Cíl projektu
 Cílem tohoto projektu je porovnat, jak se v profesionálním fotbale používají drahé monitorovací systémy (vesty s GPS) a jak bychom mohli podobnou funkci levně napodobit pomocí mikrokontrolerů (jako je např. Raspberry Pi Pico, Arduino, ESP32) a levných senzorů.
 
