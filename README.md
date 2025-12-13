@@ -38,8 +38,19 @@ Vygenerováno pomocí Google Gemini
 S vytvořením kódu mi pomáhalo Google Gemini
 #### Hlavní chyby a problémy u DIY řešení:
 ##### Chyby spojené s měřením
-1.trj
-2.tzj
+1.Drift
+
+2.Šum a vibrace
+
+3.Teplotní závislost
+##### Chyby spojené s výpočtem a kalibrací
+1. Statické zrychlení
+
+2. Nesprávná kalibrace gyroskopu/akcelerometru
+##### Chyby spojené s hardwarem a zapojením
+1. Problémy s I2C komunikací
+
+2. Nevhodné umístění a uchycení
 
 ### Srovnání: Komerční vs. DIY řešení
 | Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
