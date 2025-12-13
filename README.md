@@ -28,7 +28,9 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 - Komunikace: Integrované Wi-Fi pro přenos dat do lokální sítě nebo na server (např. MQTT, HTTP) nebo Bluetooth pro připojení k aplikaci v telefonu. Toto je klíčová výhoda oproti standardnímu Pico.
 - Přesnost: Přesnost měření je stejná – přesnost polohy je stále limitována driftem, ale přenos dat je spolehlivý.
 - Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, 300 - 700 Kč za komplet).
-![DIYvesta](DIYvesta.png) Vygenerováno Gemini AI
+![DIYvesta](DIYvesta.png) Vygenerováno Google Gemini
+#### Příklad kódu v MicroPythonu
+![kod](kod.png) S vytvořením kódu mi pomohlo Google Gemini
 
 ### Srovnání: Komerční vs. DIY řešení
 | Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
