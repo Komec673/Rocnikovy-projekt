@@ -32,6 +32,10 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 ![DIYvesta](DIYvesta.png) Vygenerováno pomocí Google Gemini
 #### Příklad kódu v MicroPythonu
 ![kod](kod.png) S vytvořením kódu mi pomáhalo Google Gemini
+#### Hlavní chyby a problémy u DIY řešení:
+##### Chyby spojené s měřením
+1.trj
+2.tzj
 
 ### Srovnání: Komerční vs. DIY řešení
 | Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
@@ -46,3 +50,4 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 | **Účel použití** | Monitorování fyziologické zátěže, taktická analýza (kde se hráč pohyboval). | Demonstrace principů, testování algoritmů (filtrace dat), měření relativní zátěže (akcelerace). |
 | **Požadované znalosti** | Žádné (jen uživatelská úroveň). | Hardware (I2C, pájení), programování (MicroPython/C++), matematika (filtrace dat). |
 | **Přibližná cena** | 25 000 Kč+ za jednotku + roční licenční poplatky. | 300 - 700 Kč za komplet |
+## Literatura
