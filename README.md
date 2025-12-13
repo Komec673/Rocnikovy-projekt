@@ -30,9 +30,11 @@ Tento typ projektu je ideální pro demonstraci základních principů zpracová
 - Přesnost: Přesnost měření je stejná – přesnost polohy je stále limitována driftem, ale přenos dat je spolehlivý.
 - Cena: Velmi nízká cena (lehce vyšší než Pico bez Wi-Fi, 300 - 700 Kč za komplet).
 ![DIYvesta](DIYvesta.png)
+
 Vygenerováno pomocí Google Gemini
 #### Příklad kódu v MicroPythonu
 ![kod](kod.png) 
+
 S vytvořením kódu mi pomáhalo Google Gemini
 #### Hlavní chyby a problémy u DIY řešení:
 ##### Chyby spojené s měřením
