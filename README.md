@@ -53,12 +53,22 @@ S vytvořením kódu mi pomáhalo Google Gemini
 - Řešení: Nutnost provést kalibraci za běhu nebo během inicializace (např. měření průměrného offsetu os na začátku tréninku).
 ##### Chyby spojené s výpočtem a kalibrací
 1. Statické zrychlení
+   - Problém: Akcelerometr měří jak pohybové zrychlení, tak gravitaci. Pokud není senzor dokonale v rovině (což na fotbalistovi nikdy nebude), gravitační zrychlení unikne do všech tří os (X, Y, Z).
+   - Výsledek: Zpracovávaná data zrychlení jsou neustále zkreslena statickou složkou gravitace.
+   - Řešení: Použití gyroskopu společně s akcelerometrem (v rámci IMU) k určení aktuální orientace zařízení. To umožní odečíst gravitační složku a ponechat pouze zrychlení způsobené pohybem hráče.
 
 2. Nesprávná kalibrace gyroskopu/akcelerometru
+   - Problém: Každý čip má mírně odlišné offsety (nulové body) a škálování. Pokud tyto offsety nejsou správně odečteny na začátku, každé měření bude posunuto.
+   - Řešení: Předběžná kalibrace – na začátku tréninku měření nehybného senzoru (např. 1000 vzorků) pro určení průměrné chyby, která se následně od všech budoucích hodnot odečítá.
+   
 ##### Chyby spojené s hardwarem a zapojením
 1. Problémy s I2C komunikací
+   - Problém: Komunikace mezi Pico W a MPU-6050 probíhá přes I2C sběrnici. Chyby v komunikaci mohou být způsobeny nedostatečným napájením, chybějícími pull-up rezistory (které jsou ale často již na breakout modulech), nebo příliš dlouhými/nekvalitními kabely.
+   - Řešení: Zajistit krátké a pevné zapojení a případně snížit rychlost I2C sběrnice, pokud by docházelo k chybám.
 
 2. Nevhodné umístění a uchycení
+   - Problém: Pokud je senzor v boxu volně, nebo je box volně uchycen na vestě, dochází k nechtěnému pohybu a vibracím.
+   - Řešení: Pevné 3D tištěné pouzdro, kde je senzor pevně fixován a kde je eliminován pohyb samotného senzoru vůči tělu.
 
 ### Srovnání: Komerční vs. DIY řešení
 | Aspekt | Komerční Systém (STATSports) | DIY Řešení (Pico W) |
