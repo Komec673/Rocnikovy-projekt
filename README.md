@@ -39,10 +39,16 @@ S vytvořením kódu mi pomáhalo Google Gemini
 #### Hlavní chyby a problémy u DIY řešení:
 ##### Chyby spojené s měřením
 1.Drift
-
+- Problém: Největší a nejsložitější problém. Akcelerometr měří zrychlení, když toto zrychlení vypočítáme na rychlost a poté na polohu/vzdálenost, každá malá nepřesnost v datech ze senzoru se sčítá.
+- Výsledek: Po pouhých několika sekundách nehybnosti nebo pohybu se vypočítaná poloha na základě zrychlení dramaticky liší od skutečné polohy. Tím je měření ujeté vzdálenosti a rychlosti nepřesné.
+- Řešení: Musíme implementovat komplexní filtry (např. Kalmanův filtr), které se snaží drift matematicky potlačit.
 2.Šum a vibrace
-
+- Problém: Levné senzory generují elektronický šum. Senzor je navíc připevněn na těle hráče, což způsobuje mechanické vibrace (např. při dopadu nohy, sprintu).
+- Výsledek: Senzor vnímá vibrace jako skutečné zrychlení a zkresluje data.
+- Řešení: Aplikace digitálních filtrů (např. dolní propust) ve zpracování dat, které odstraní vysokofrekvenční šum a vibrace předtím, než se data použijí pro integraci. 
 3.Teplotní závislost
+- Problém: Senzor IMU není teplotně kompenzován. Změny teploty (např. zahřátí čipu při provozu nebo změna venkovní teploty) mohou ovlivnit jeho kalibraci.
+- Řešení: Nutnost provést kalibraci za běhu nebo během inicializace (např. měření průměrného offsetu os na začátku tréninku).
 ##### Chyby spojené s výpočtem a kalibrací
 1. Statické zrychlení
 
