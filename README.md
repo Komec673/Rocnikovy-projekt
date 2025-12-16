@@ -66,3 +66,4 @@ S vytvořením kódu mi pomáhalo Google Gemini
 | **Požadované znalosti** | Žádné (jen uživatelská úroveň). | Hardware (I2C, pájení), programování (MicroPython/C++), matematika (filtrace dat). |
 | **Přibližná cena** | 25 000 Kč+ za jednotku + roční licenční poplatky. | 300 - 700 Kč za komplet |
 ## Literatura
+Google Gemini. Online. Dostupné z: https://gemini.google.com/app?hl=cs. [cit. 2025-12-16].
