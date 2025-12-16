@@ -85,3 +85,6 @@ S vytvořením kódu mi pomáhalo Google Gemini
 | **Přibližná cena** | 25 000 Kč+ za jednotku + roční licenční poplatky. | 300 - 700 Kč za komplet |
 ## Zdroje
 Google Gemini. Online. Dostupné z: https://gemini.google.com/app?hl=cs. [cit. 2025-12-16].
+Catapult. Online. Dostupné z: https://www.catapult.com/solutions/vector-pro. [cit. 2025-12-16].
+Catapult Support. Online. Dostupné z: https://support.catapultsports.com/hc/en-us/articles/360001235615-What-is-inside-Catapult-s-wearable-technology. [cit. 2025-12-16].
+Alibaba. Online. Dostupné z: https://www.alibaba.com/product-insights/statsports-vest.html. [cit. 2025-12-16].
