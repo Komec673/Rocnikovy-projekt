@@ -84,10 +84,18 @@ S vytvořením kódu mi pomáhalo Google Gemini
 | **Požadované znalosti** | Žádné (jen uživatelská úroveň). | Hardware (I2C, pájení), programování (MicroPython/C++), matematika (filtrace dat). |
 | **Přibližná cena** | 25 000 Kč+ za jednotku + roční licenční poplatky. | 300 - 700 Kč za komplet |
 ## Zdroje
-Google Gemini. Online. Dostupné z: https://gemini.google.com/app?hl=cs. [cit. 2025-12-16].
-
 Catapult. Online. Dostupné z: https://www.catapult.com/solutions/vector-pro. [cit. 2025-12-16].
 
 Catapult Support. Online. Dostupné z: https://support.catapultsports.com/hc/en-us/articles/360001235615-What-is-inside-Catapult-s-wearable-technology. [cit. 2025-12-16].
 
 Alibaba. Online. Dostupné z: https://www.alibaba.com/product-insights/statsports-vest.html. [cit. 2025-12-16].
+
+Reddit. Online. Dostupné z: https://www.reddit.com/r/diyelectronics/comments/p4sogp/diy_gps_tracker_for_footballsport_where_to_start/. [cit. 2025-12-18].
+
+STATSports. Online. Dostupné z: https://eu.shop.statsports.com/products/statsports-academy-pro. [cit. 2025-12-18].
+
+YouTube - Paul McWhorter. Online. Dostupné z: https://www.youtube.com/watch?v=f7Uzgt18L0M. [cit. 2025-12-18].
+
+YouTube - Inertial Sense, Inc. Online. Dostupné z: https://www.youtube.com/watch?v=6VGl-O6MAuY. [cit. 2025-12-18].
+
+Google Gemini. Online. Dostupné z: https://gemini.google.com/app?hl=cs. [cit. 2025-12-16].
