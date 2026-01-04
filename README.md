@@ -17,8 +17,8 @@ Komerční sportovní analytické systémy se zaměřují na přesné a komplexn
 
 ![Vesta](vesta.png)
 ### DIY projekty - jednoduché monitotování
-Tyto projekty se snaží replikovat základní funkce komerčních systémů s minimálními náklady, často zaměřené na jednu konkrétní metriku.
-#### Příklad: Měření rychlosti hráče pomocí Raspberry Pico 2 W
+Tyto projekty se snaží replikovat základní funkce komerčních systémů s menšími náklady.
+#### Příklad: Měření metrik pomocí Raspberry Pico 2 W
 Tento typ projektu je ideální pro demonstraci základních principů zpracování senzorických dat včetně bezdrátového přenosu dat v reálném čase.
 
 - Typ zařízení: Kompaktní box mezi lopatkami (optimální místo pro GPS a stabilitu)
@@ -66,11 +66,11 @@ S vytvořením kódu mi pomáhalo Google Gemini
 | :--- | :--- | :--- |
 | **Čip/Výkon** | Optimalizované ARM Cortex-M, ASIC | RP2350 (Pico 2 W) – vysoký výkon pro náročné výpočty filtrů |
 | **Senzor Polohy** | Multi-band GNSS (vysoká přesnost) | u-blox NEO-M8N (GNSS s externí aktivní anténou) |
-| **Pohybový senzor** | Profi IMU (velmi nízký šum) | BNO085 (9-osý, integrovaná hardwarová fúze dat Bosch) |
+| **Pohybový senzor** | Profesionální IMU (velmi nízký šum) | BNO085 (9-osý, integrovaná hardwarová fúze dat Bosch) |
 | **Sledované metriky** | Přesná poloha (heatmapy), maximální rychlost, počet sprintů, akcelerační zátěž | Heatmapy (přes GPS), max. rychlost, detekce sprintů, zrychlení (G-force), uběhnutá vzdálenost |
 | **Zpracování chyb** | Pokročilá fúze senzorů (GNSS + IMU) + proprietární Kalmanovy filtry | Hardware Sensor Fusion + doplňkový Kalmanův filtr |
 | **Bezdrátová komunikace** | Vysokofrekvenční RF modul (široký dosah, spolehlivost) nebo Bluetooth LE | Wi-Fi / Bluetooth + Záložní logování na SD kartu |
-| **Napájení a výdrž** | Integrovaný Li-Pol, výdrž 6–10 h, bezdrátové/rychlé nabíjení | Li-Pol (800+ mAh) + PMIC (Power Management IC). Výdrž 4–6 h (dle frekvence Wi-Fi a GPS) |
+| **Napájení a výdrž** | Integrovaný Li-Pol, výdrž 6–10 h, bezdrátové/rychlé nabíjení | Li-Pol (800+ mAh) + PMIC (Power Management IC), výdrž 4–6 h (dle frekvence Wi-Fi a GPS) |
 | **Přesnost** | Maximální (profesionální standard) | Vysoká/Střední (plně použitelné pro sportovní analýzu) |
 | **Cena HW** | 25 000 Kč+ za jednotku (+ roční licenční poplatky) | 1 500 – 2 500 Kč za komplet |
 | **Cena práce (vývoj)** | Zahrnuta v ceně produktu | ~10 000 Kč+ (vyčíslení 50+ hodin odborného vývoje a ladění) |
