@@ -16,7 +16,7 @@ Komerční sportovní analytické systémy se zaměřují na přesné a komplexn
 - Cena: Vysoká cena (25 000 kč+ za jednotku + licence).
 
 ![Vesta](vesta.png)
-### DIY projekty - jednoduché monitotování
+### DIY projekty
 Tyto projekty se snaží replikovat základní funkce komerčních systémů s menšími náklady.
 #### Příklad: Měření metrik pomocí Raspberry Pico 2 W
 Tento typ projektu je ideální pro demonstraci základních principů zpracování senzorických dat včetně bezdrátového přenosu dat v reálném čase.
