@@ -18,17 +18,17 @@ Komerční sportovní analytické systémy se zaměřují na přesné a komplexn
 ![Vesta](vesta.png)
 ### DIY projekty - jednoduché monitotování
 Tyto projekty se snaží replikovat základní funkce komerčních systémů s minimálními náklady, často zaměřené na jednu konkrétní metriku.
-#### Příklad: Měření rychlosti hráče pomocí Raspberry Pi Pico W
+#### Příklad: Měření rychlosti hráče pomocí Raspberry Pico 2 W
 Tento typ projektu je ideální pro demonstraci základních principů zpracování senzorických dat včetně bezdrátového přenosu dat v reálném čase.
 
-- Typ zařízení: Kompaktní box mezi lopatkami (optimální místo pro GPS a stabilitu).
+- Typ zařízení: Kompaktní box mezi lopatkami (optimální místo pro GPS a stabilitu)
 - Primární senzory: BNO085 (9-osý IMU): Obsahuje procesor pro „Sensor Fusion“, který automaticky kombinuje akcelerometr, gyroskop a magnetometr. u-blox NEO-M8N: GPS/GNSS modul pro přesné určení polohy.
 - Sledované metriky: Skutečná rychlost (v km/h), přesná ujetá vzdálenost, heatmapy pohybu na hřišti a intenzita zrychlení bez vlivu gravitace.
 - Mikrokontroler: Raspberry Pi Pico 2 W: Novější verze s vyšším výkonem (jádra ARM Cortex-M33), která zvládne paralelně zpracovávat data z GPS i IMU a zároveň je vysílat.
 - Zpracování dat: Hardware Fusion: Senzor BNO085 posílá už "očištěná" data (kvaterniony), čímž se drasticky snižuje drift. GPS slouží jako absolutní reference pro opravu polohy.
 - Komunikace: Bluetooth Low Energy (BLE): Pro úsporný přenos do mobilní aplikace v reálném čase. SD karta: Záložní ukládání surových dat (logování) pro pozdější hloubkovou analýzu.
 - Přesnost: Komponenty jsou dražší, ale nabízejí vysokou přesnost, která se již blíží komerčním systémům jako Catapult.
-- Cena: Vyšší cena (1500 - 2000 Kč za HW).
+- Cena: 1500 - 2500 Kč za komplet
 
 ![DIYvesta](DIYvesta.png)
 
@@ -66,14 +66,14 @@ S vytvořením kódu mi pomáhalo Google Gemini
 | :--- | :--- | :--- |
 | **Čip/Výkon** | Optimalizované ARM Cortex-M, ASIC | RP2350 (Pico 2 W) – vysoký výkon pro náročné výpočty filtrů |
 | **Senzor Polohy** | Multi-band GNSS (vysoká přesnost) | u-blox NEO-M8N (GNSS s externí aktivní anténou) |
-| **Inerciální senzor (IMU)** | Vysoká třída, nízký šum, vysoká vzorkovací frekvence => 100 Hz | Spotřebitelská třída (např. MPU-6050, MPU-9250), vyšší šum |
-| **Sledované metriky** | Přesná poloha (heatmapy), maximální rychlost, počet sprintů, akcelerační zátěž. | Zrychlení v reálném čase, Relativní rotační změny. Rychlost/Vzdálenost pouze jako odhad s chybou (driftem). |
-| **Řešení chyby (drift)** | Pokročilá fúze senzorů (GNSS + IMU) + proprietární Kalmanovy filtry. | Nutnost použít Kalmanův filtr nebo Doplněný filtr (Complementary Filter) vlastními silami. |
-| **Bezdrátová komunikace** | Vysokofrekvenční RF modul (široký dosah, spolehlivost) nebo Bluetooth LE. | Integrované Wi-Fi/Bluetooth (vhodné pro lokální síť, dosah limitován standardem). |
-| **Napájení a výdrž** | Optimalizované obvody, baterie s výdrží 6-10 hodin. | Běžná Li-Pol baterie. Výdrž silně závislá na použití Wi-Fi a kódu. |
-| **Účel použití** | Monitorování fyziologické zátěže, taktická analýza (kde se hráč pohyboval). | Demonstrace principů, testování algoritmů (filtrace dat), měření relativní zátěže (akcelerace). |
-| **Požadované znalosti** | Žádné (jen uživatelská úroveň). | Hardware (I2C, pájení), programování (MicroPython/C++), matematika (filtrace dat). |
-| **Přibližná cena** | 25 000 Kč+ za jednotku + roční licenční poplatky. | 300 - 700 Kč za komplet |
+| **Pohybový senzor** | Profi IMU (velmi nízký šum) | BNO085 (9-osý, integrovaná hardwarová fúze dat Bosch) |
+| **Sledované metriky** | Přesná poloha (heatmapy), maximální rychlost, počet sprintů, akcelerační zátěž | Heatmapy (přes GPS), max. rychlost, detekce sprintů, zrychlení (G-force), uběhnutá vzdálenost |
+| **Zpracování chyb** | Pokročilá fúze senzorů (GNSS + IMU) + proprietární Kalmanovy filtry | Hardware Sensor Fusion + doplňkový Kalmanův filtr |
+| **Bezdrátová komunikace** | Vysokofrekvenční RF modul (široký dosah, spolehlivost) nebo Bluetooth LE | Wi-Fi / Bluetooth + Záložní logování na SD kartu |
+| **Napájení a výdrž** | Integrovaný Li-Pol, výdrž 6–10 h, bezdrátové/rychlé nabíjení | Li-Pol (800+ mAh) + PMIC (Power Management IC). Výdrž 4–6 h (dle frekvence Wi-Fi a GPS) |
+| **Přesnost** | Maximální (profesionální standard) | Vysoká/Střední (plně použitelné pro sportovní analýzu) |
+| **Cena HW** | 25 000 Kč+ za jednotku (+ roční licenční poplatky) | 1 500 – 2 500 Kč za komplet |
+| **Cena práce (vývoj)** | Zahrnuta v ceně produktu | ~10 000 Kč+ (vyčíslení 50+ hodin odborného vývoje a ladění) |
 ## Zdroje
 Catapult. Online. Dostupné z: https://www.catapult.com/solutions/vector-pro. [cit. 2025-12-16].
 
